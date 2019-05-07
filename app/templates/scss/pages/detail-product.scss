@@ -1,0 +1,128 @@
+@import '../common/common';
+
+// style for detail product
+#detail-product {
+    padding: 0 $paddingMain;
+}
+main {
+    
+    .detail--info {
+        margin-top: 43px;
+        &-content {
+            .social-product {
+                img:nth-child(3) {
+                    margin: 0 7px;
+                }
+                img:last-child {
+                    margin-left: 26px;
+                }
+                .number-img {
+                    padding: 3px;
+                    margin-left: 5px;
+                    position: relative;
+                    border: 1px solid $silverText;
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        width: 5px ;
+                        height: 5px;
+                        border-left: 1px solid $silverText;
+                        border-bottom: 1px solid $silverText;
+                        transform: rotate(45deg);
+                        top: 10px;
+                        left: -4px;
+                        background-color: white;
+                        z-index: 20;
+                    }
+                    
+                }
+            }
+            &>span {
+                color: $red;
+                display: inline-block;
+                margin-right: 9px;
+            }
+            label {
+                text-decoration: line-through;
+                font-size: 0.8rem;
+                color: $silverTextBold;
+            }
+            p {
+                border-top: 1px solid $silverText;
+                border-bottom: 1px solid $silverText;
+                color: $silverTextBold;
+                padding: 19px 0;
+            }
+            .quantity {
+                padding: 16px 0;
+                border-bottom: 1px solid $silverText;
+                span {
+                    display: inline-block;
+                    margin-right: 16px;
+                }
+                li:nth-child(2),
+                li:last-child {
+                    @include quantity-frame(44px,44px);
+                }
+                li:nth-child(3) {
+                    @include quantity-frame(55px,44px);
+                }
+            }
+            .wrap-btn {
+                margin: 19px 0;
+                figure {
+                    margin-left: 8px !important;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 59px;
+                    height: 59px;
+                    border-radius: 50%;
+                    border: 1px solid $silverText;
+                }
+            }
+        }
+    }
+    .galary {
+        margin-right: 22px;
+        .wrap--galary-item {
+            margin-top: 22px;
+            img {
+                 width: 61px;
+                 height: 61px;
+                 margin-right: 10px;
+            }
+            img:last-child {
+                margin-right: 0;
+            }
+        }
+        &>img {
+            width: 100%;
+        }
+    }
+    .product--relate {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-gap: 22px;
+    }
+    .detail-info2 {
+        
+        margin-top: 83px;
+        .tab-pane {
+            padding: 37px 32px;
+            border: 1px solid $silverText;
+            border-top: 0;
+        }
+        a {
+            color: black;
+            text-transform: uppercase;
+        }
+        a.active {
+            color: $green !important;
+            border-top: 2px solid black !important;
+        }
+    }
+    .product--relate {
+        margin-bottom: 58px;
+    }
+}

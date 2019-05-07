@@ -1,0 +1,37 @@
+extends ../layouts/layout1.pug
+
+block title
+    title Đăng ký
+
+block style
+    link(rel="stylesheet" type="text/css",href='../css/pages/signup.css')
+
+block content
+    main#signup
+        include ../components/path.pug
+        +path('Đăng ký')
+        include ../components/input.pug
+        .info--customer
+            .info--customer-title
+                h4.text-uppercase thông tin các nhân
+            .info--customer-content.d-flex
+                .left
+                    +input('Họ và tên')
+                    +input('Số ĐT')
+                    input(type='checkbox' id='signup-email')
+                    label(for='signup-email') Đăng ký nhận thông tin qua email
+                .right
+                    +input('Địa chỉ email')
+                    +input('Website của bạn')
+        .info--customer
+            .info--customer-title
+                h4.text-uppercase thông tin tài khoản
+            .info--customer-content.d-flex
+                .left 
+                    +input('Mật khẩu')
+                .right    
+                    +input('Nhập lại mật khẩu')
+        .btn-signup
+            include ../components/button.pug
+            +button('quay lại','not-color')
+            +button('đăng ký')    

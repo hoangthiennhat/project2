@@ -1,0 +1,61 @@
+extends ../layouts/layout1.pug
+
+block title
+    title Tin tức
+
+block style
+    link(rel="stylesheet" type="text/css",href='../css/pages/news.css') 
+    
+
+block content 
+    main#new
+        include ../components/path.pug
+        +path('Cây dạ lam')
+        .new.d-flex
+            aside
+                include ../components/title.pug
+                +title('Danh mục sản phẩm')
+                ul 
+                    - let list6 = ['Cây chậu treo(10)','Cây có hoa(5)','Cây dây leo','Cây để bán','Cây may mắn','Cây trang trí ','Cây nội thất']
+                        each item in list6
+                            li= item
+                +title('Tin tức nổi bật')
+                .new-highligh
+                    mixin item-highligh(src,content)
+                        .item-highligh.d-flex
+                            img(src=src alt='hoa')
+                            p= content
+                    +item-highligh('../images/new1.png','Hướng dẫn và lựa chọn bố trí cây xanh trong phòng khách')
+                    +item-highligh('../images/new10.png','Những sai lầm nên tránh khi bố trí cây xanh trong nhà')
+                    +item-highligh('../images/new11.png','7 loại cây xanh để bàn đang được giới văn phòng ưa chuộng')
+                    +item-highligh('../images/new12.png','Hướng dẫn lựa chọn cây cảnh trang trí trong văn phòng')
+                    +item-highligh('../images/new13.png','4 loại cây cảnh thích hơp để bày trí ở  đại sảnh')        
+                +title('Blog tag')
+                .blog-tag
+                    - let list7 = ['Cây văn phòng','Cây phát lộc','Cây xanh','Cây trang trí','Cây','Plants','Sức khoẻ','Quà tặng','Lưu niệm']
+                        each item in list7
+                            span= item
+            section 
+                mixin new(title,src,content)
+                    .section-new
+                        h4= title
+                        .date-new
+                            img(src='../images/date.png' alt='ngày')
+                            span 20/12/2015
+                            img(src='../images/time.png' alt='giờ')
+                            span 11:20:00 AM
+                            img(src='../images/comment.png' alt='comment')
+                            span 0 Bình luận  
+                        img(src=src alt='avt').w-100
+                        p= content
+                +new('Cách bố trí chậu hoa trước cửa ngay lần đầu tiên','../images/new11.png','Như thể hiện sự thân thiện cũng như sự hiếu khách của gia chủ, phần không gian trước cửa nhà luôn được đầu tư và trang trí khá bắt mắt. Cũng có thể nói đây là bộ mặt của ngôi nhà, là ấn tượng đầu tiên khi một vị khách ghé chơi nhà bạn đấy. Hãy cùng Sài Gòn Hoa tham khảo một vài cách bố trí chậu cây hoa cảnh ngay trước cửa nhà sao cho ấn tượng nhất nhé!')             
+                +new('Cách bố trí chậu hoa trước cửa ngay lần đầu tiên','../images/new11.png','Như thể hiện sự thân thiện cũng như sự hiếu khách của gia chủ, phần không gian trước cửa nhà luôn được đầu tư và trang trí khá bắt mắt. Cũng có thể nói đây là bộ mặt của ngôi nhà, là ấn tượng đầu tiên khi một vị khách ghé chơi nhà bạn đấy. Hãy cùng Sài Gòn Hoa tham khảo một vài cách bố trí chậu cây hoa cảnh ngay trước cửa nhà sao cho ấn tượng nhất nhé!')             
+                +new('Cách bố trí chậu hoa trước cửa ngay lần đầu tiên','../images/new11.png','Như thể hiện sự thân thiện cũng như sự hiếu khách của gia chủ, phần không gian trước cửa nhà luôn được đầu tư và trang trí khá bắt mắt. Cũng có thể nói đây là bộ mặt của ngôi nhà, là ấn tượng đầu tiên khi một vị khách ghé chơi nhà bạn đấy. Hãy cùng Sài Gòn Hoa tham khảo một vài cách bố trí chậu cây hoa cảnh ngay trước cửa nhà sao cho ấn tượng nhất nhé!')             
+                .pagination-new.d-flex.justify-content-end
+                    include ../components/quantity-frame.pug
+                    +quantity-frame('Trang trước')
+                    +quantity-frame('1')
+                    +quantity-frame('2')
+                    +quantity-frame('3')
+                    +quantity-frame('4')
+                    +quantity-frame('Trang cuối')

@@ -1,0 +1,31 @@
+doctype html
+html(lang='en')
+    head
+        block title
+            title Đây là trang demo project 1
+        meta(charset='utf-8')
+        script(type='text/javascript' src='./script/jquery.min.js')
+        block style
+        
+        //- link  boostrap
+        link(rel="stylesheet" href='../css/bootstrap.css'   type='text/css')
+        //- link font css awesome
+        link(rel="stylesheet" href='./vendor/awesome/css/all.css' type='text/css')
+        //- font RobotoSlab
+        link(href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab" rel="stylesheet")
+        meta(name='viewport',content='width=device-width,initial-scale=1.0')
+        meta(name='keywords',content='')
+        meta(name='description',content='')
+        
+        
+        //- link font js awesome
+        script(type='text/javascript' src='./vendor/awesome/js/all.js')
+        script(type='text/javascript' src='../script/bootstrap.min.js')
+        
+    body
+        include ../parts/header2.pug
+        block content
+        include ../parts/footer2.pug
+        
+        
+        

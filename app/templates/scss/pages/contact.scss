@@ -1,0 +1,60 @@
+@import '../common/common';
+
+//style for contact
+main {
+    .path {
+        padding: 0 $paddingMain;
+    }
+    .map--contact {
+        margin-top: 56px;
+    }
+    iframe {
+        width: 100%;
+        
+        height: 365px;
+    }
+    .content--contact {
+        margin:46px 0 89px;
+        display: flex;
+        padding: 0 $paddingMain;
+        &-input {
+            width: 50%;
+            margin-right: 28px;
+            h4 {
+                color: $green;
+            }
+            .input-child:last-child {
+                input {
+                    height: 168px;
+                }
+            }
+            
+        }
+        &-info {
+            width: 50%;
+            margin-left: 28px;
+            figure {
+                span {
+                    bottom: 0;
+                    left: 30px;
+                }
+            }
+            span {
+                color : $silverTextBold;
+            }
+            p {
+                margin: 21px 0;
+            }
+            .email-contact {
+                margin-top: 13px;
+            }
+            .email-contact,
+            .phone-contact {
+                span {
+                    margin-left: 7px;
+                }
+            }
+        }
+    }
+    
+}

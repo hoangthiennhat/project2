@@ -1,0 +1,48 @@
+    /*
+    * this is title on main 
+    */
+    .title {
+        margin-top: 44px;
+        margin-bottom: 29px;
+        border-bottom: 1px solid $silverTextLight;
+        span {
+            display: inline-block;
+            font-family: 'Roboto Slab', serif;
+            color: $green;
+            padding: 15px 0;
+            border-bottom: 2px solid $green;
+            font-weight: bold;
+        }
+        .arrow {
+            @mixin arr {
+                width:21px;
+                height: 21px;
+                border-radius: 50%;
+                border: 1px solid $silverText;
+                position: relative;
+                cursor: pointer;                    
+                &:after {
+                    width: 4px;
+                    height: 4px;
+                    content: '';
+                    position: absolute;
+                    top: 8px;
+                    left: 8px;
+                    border-top: 1px solid $silverText;
+                    border-right: 1px solid $silverText;
+                }
+            }
+            &-left {
+                @include arr;
+                transform: rotate(225deg);
+            }
+            &-right {
+                @include arr;
+                transform: rotate(45deg);
+                margin-left: 4px;
+            }
+        }
+    }
+    /*
+    * title on main
+    */

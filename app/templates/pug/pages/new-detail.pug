@@ -1,0 +1,64 @@
+.section-new
+    h4 Cách bố trí hoa chậu trước cửa ngay lần đầu tiên
+    .date-new
+        img(src='../images/date.png' alt='ngày')
+        span 20/12/2015
+        img(src='../images/time.png' alt='giờ')
+        span 11:20:00 AM
+        img(src='../images/comment.png' alt='comment')
+        span 0 Bình luận  
+    img(src='../images/new11.png ' alt='avt').w-100
+    p 
+        | Như thể hiện sự thân thiện cũng như sự hiếu khách của gia chủ, phần không gian trước cửa nhà luôn được đầu tư và trang trí khá bắt mắt. Cũng có thể nói đây là bộ mặt của ngôi nhà, là ấn tượng đầu tiên khzi một vị khách ghé chơi nhà bạn đấy. Hãy cùng Sài Gòn Hoa tham khảo một vài cách bố trí chậu cây hoa cảnh ngay trước cửa nhà sao cho ấn tượng nhất nhé!
+    p
+        | 7 loại cây xanh để bàn đang được giới văn phòng ưa chuộng, Những mẫu cây để bàn đang được giới văn phòng ưa chuộng, cây cảnh văn phòng để bàn thông dụng, những cây cảnh được giới văn phòng ưa chuộng
+    p
+        |  Cây bạch mã hoàng tử để bàn có chiều cao trung bình từ 20 – 40cm, dáng đẹp, lá cây màu xanh đậm với những đường vân vàng nhạt mọc đối xứng nhau trông rất sang trọng và lịch lãm.
+    p
+        |  Loại cây này ưa bóng, chịu được nhiệt độ thấp lại có khả năng tạo ẩm và thanh lọc không khí nên rất thích hợp đặt trong văn phòng làm việc có máy lạnh.
+    p
+        |  Cây bạch mã hoàng tử thường được chọn để đặt trên bàn làm việc của sếp, bàn nhỏ ở phòng tiếp khách hoặc bàn làm việc của các đấng mày râu.
+    p
+        | 2. Cây trầu bà đế vương
+    p
+        | Cây trầu bà đế vương tượng trưng cho quyền uy, phong thái dẫn đầu nên thích hợp để đặt trên bàn làm việc của người lãnh đạo, quản lý doanh nghiệp.
+    p
+        |  Lá cây trầu bá đế vương khá to, dày, hơi bóng, đường gân rõ ràng, có hình dạng như hình trái tim, xòe rộng hướng lên trên trông rất bệ nghễ và cao sang.
+    p
+        | Tùy thuộc vào sở thích cá nhân và thiết kế chủ đạo của không gian phòng làm việc, bạn có thể chọn loại trầu bà đế vương xanh, trầu bá đế vương vàng hoặc trầu bà đế vương đỏ.
+    img(src='../images/new-detail.png' alt='cây trầu đế vương')
+    p   
+        | Như thể hiện sự thân thiện cũng như sự hiếu khách của gia chủ, phần không gian trước cửa nhà luôn được đầu tư và trang trí khá bắt mắt. Cũng có thể nói đây là bộ mặt của ngôi nhà, là ấn tượng đầu tiên khzi một vị khách ghé chơi nhà bạn đấy. Hãy cùng Sài Gòn Hoa tham khảo một vài cách bố trí chậu cây hoa cảnh ngay trước cửa nhà sao cho ấn tượng nhất nhé!
+    p   
+        | 7 loại cây xanh để bàn đang được giới văn phòng ưa chuộng, Những mẫu cây để bàn đang được giới văn phòng ưa chuộng, cây cảnh văn phòng để bàn thông dụng, những cây cảnh được giới văn phòng ưa chuộng
+
+    .comment
+        .comment--title
+            | bình luận 3
+        .comment--content
+            mixin comment-item(src,name,content,time,check=false)
+                .comment--content-item
+                    img(src=src alt='avatar')
+                    .info-comment
+                        .name
+                            h5= name
+                            span Trả lời
+                        p= content 
+                        i= time    
+                        if check
+                            .answer
+                                +comment-item(src,name,content,time)
+                        
+            +comment-item('../images/download.png','Nguyễn Văn A','This is Photoshop"s version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit ','Thứ 7, 26/12/2019 12:00 AM',true)
+            +comment-item('../images/download.png','Bùi Văn B','This is Photoshop"s version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit ','Thứ 2, 04/2/2005 10:30 PM')
+    .write--comment
+        .write--comment-title.text-uppercase viết bình luận
+        .input-text
+            -let list8 = ['Họ và tên:','Email','Phone']
+                each item in list8
+                    input(type='text' placeholder=item)
+
+        .input-textarea
+            textarea(placeholder='Bình luận')
+        include ../components/button.pug
+        +button('gửi')    

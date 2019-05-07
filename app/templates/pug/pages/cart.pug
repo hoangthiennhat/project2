@@ -1,0 +1,54 @@
+extends ../layouts/layout1.pug
+
+block title
+    title Trang giỏ hàng
+
+block style
+    link(rel="stylesheet" type="text/css",href='../css/pages/cart.css') 
+
+block content
+    main#cart
+        include ../components/path.pug
+        +path('Giỏ hàng')
+        h4.text-uppercase giỏ hàng
+        .cart
+            table
+                thead
+                    - let list5 = ['hình ảnh','tên sản phẩm','đơn giá','số lượng','thành tiền','xoá']
+                        each item in list5
+                            td.text-center.text-white.text-uppercase= item
+                tbody
+                    include ../components/quantity-frame.pug
+                    mixin item-cart(src,name,price1,number,price2)
+                        tr
+                            td
+                                figure
+                                    img(src=src alt='cây')
+                            td.text-uppercase= name
+                            td= price1
+                            td
+                                +quantity-frame(number)
+                            td= price2
+                            td
+                                img(src='../images/delete.png' alt='delete')
+                    +item-cart('../images/cota.png','cây văn phòng','270.000đ','1','270.000đ')
+                    +item-cart('../images/cota.png','cây văn phòng','270.000đ','1','270.000đ')
+                    +item-cart('../images/cota.png','cây văn phòng','270.000đ','1','270.000đ')                
+        .select-buy.d-flex.justify-content-end
+            include ../components/button.pug
+            +button('huỷ đơn hàng','not-color')
+            +button('tiếp tục mua')
+        .total-pay.d-inline-block.float-right
+            table.d-flex.flex-column
+                tbody
+                    tr
+                        td tổng tiền (chưa thuế)
+                        td 270.000 đ
+                    tr
+                        td thuế (vat 10%)
+                        td 27.000 đ    
+                thead
+                    tr
+                        td tổng phải thanh toán
+                        td 297.000 đ
+        +button('thanh toán')            

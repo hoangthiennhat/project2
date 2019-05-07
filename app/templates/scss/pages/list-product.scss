@@ -1,0 +1,187 @@
+@import '../common/common';
+
+/*
+* style for page list product
+*/
+#list-product {
+    padding: 0 $paddingMain;
+}
+main {
+    
+    section {
+        display: flex;
+        aside {
+            width: 198px;
+            margin-right: $product-gap;
+        }
+        article {
+            width: calc(100% - 231px );
+        }
+    }
+}
+aside {
+    /*
+    * li in list item
+    */
+    li {
+        border-bottom: 1px solid $silverText;
+        padding: 15px 10px;
+        position: relative;
+        color: $silverTextBold;
+        cursor: pointer;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 24px;
+            left: 0;
+            width: 5px;
+            height: 5px;
+            border-top: 0.5px solid $silverTextBold;
+            border-right: 0.5px solid $silverTextBold;
+            transform: rotate(45deg);
+        }
+    }
+    /*
+    * Wrap color
+    */
+    .wrap-color {
+        display:grid;
+        grid-template-columns: auto auto;
+        .item-color {
+            margin-bottom: 26px;
+            span {
+                &:first-child{
+                    display: inline-block;
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                margin-right: 9px;
+                }
+                &:nth-child(2) {
+                    color: $silverTextBold;
+                }                
+                
+            
+            }
+        }
+        .item-color:first-child {
+            span:first-child {
+                background-color: $greenList;
+            }
+        }
+        .item-color:nth-child(2) {
+            span:first-child {
+                background-color: $redList;
+            }
+        }
+        .item-color:nth-child(3) {
+            span:first-child {
+                background-color: $violetList;
+            }
+        }
+        .item-color:nth-child(4) {
+            span:first-child {
+                background-color: $blueList;
+            }
+        }
+        .item-color:nth-child(5) {
+            span:first-child {
+                background-color: $yellowList;
+            }
+        }
+        .item-color:nth-child(6) {
+            span:first-child {
+                background-color: $pinkList;
+            }
+        }
+
+    }
+}
+article {
+    margin-top: 59px;
+    .banner-list {
+        height: 159px;
+        background: url('../../../images/new4.png') no-repeat 50% 53%;
+        background-size: cover;
+    }
+    .select-list {
+        padding: 29px 0;
+        .nav.nav-tabs {
+            border: 0;
+            a:first-child {
+                display: inline-block;
+                margin-right: 13px;
+                
+            }
+            a {
+                border: 0;
+                padding: 0;
+            }
+        }
+        .option-select {
+            .select-item {
+                select {
+                    
+                    color: $silverTextBold;                    
+                    margin-left: 18px;
+                    padding: 15px !important;
+                    background-color: white;
+                    border-color: $silverText;
+                }
+            }
+            .select-item:first-child {
+                margin-right: 39px;
+            }
+        }
+    }
+    .list-content {
+        display: grid;
+        grid-gap: $product-gap;
+        grid-template-columns: auto auto auto;
+    }
+    .grid-content {
+        .item-list-product {
+            margin-bottom: 21px;
+            border: 1px solid $silverText;
+            .item-content {
+                margin-left: 25px;
+                padding: 15px 0;
+                span {
+                    color: $red;
+                    display: inline-block;
+                    margin: 16px 0;
+                }
+            }
+        }
+        .btn-action {
+            figure {
+                width: 58px;
+                height: 58px;
+                border-radius: 50%;
+                border: 1px solid $silverText;
+                text-align: center;
+                img {
+                    margin-top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+            figure:nth-child(2) {
+                margin: 0 9px !important;
+            }
+        }
+    }
+    .pagination {
+        margin: 80px 0 157px;
+        li {
+            @include quantity-frame(44px,44px);
+        }
+        li:first-child,
+        li:last-child {
+            @include quantity-frame(108px,44px);
+        }
+        li:nth-child(2) {
+            background-color: $green;
+            color: white;
+        }
+    }
+}

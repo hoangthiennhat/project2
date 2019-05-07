@@ -1,0 +1,135 @@
+footer {
+    .footer--top {
+        padding: 34px $paddingMain;
+        background-color: $blackFooter;
+        
+    }
+    .footer--middle {
+        padding: 41px $paddingMain 61px;
+        background-color:$blackFooter
+    }
+    .footer--bottom {
+        &-more {
+            background-color:$blackFooter;
+            padding: 31px $paddingMain;
+        }
+    }
+}
+.footer--top-social {
+    .social-icon {
+        img {
+            margin-right: 20px;
+        }
+    }
+    span {
+        color:$silverText;
+    }
+}
+.footer--top-mail {
+    h4 {
+        color: $silverText;
+        font-size: 0.9rem;
+    }
+    
+}
+.footer--top-search {
+    width: 387px;
+    height: 46px;
+    .input-search {
+        height: 100%;
+    }
+    input {
+        width: 100%;
+        height: 100%;
+        border:0;
+    }
+    figure {
+        right: 0;
+        top: 0;
+        padding: 0 16px;
+        height: 100%;
+        background-color: $green !important;
+        img {
+            margin-top: 100%;
+        }
+    }
+}
+.footer--middle-info {
+    width: 326px;
+    p {
+        color: $silverText;
+        margin-top: 17px;
+        margin-bottom:22px;
+    }
+    figure {
+        span {
+            color: $silverTextBold;
+            bottom: 0;
+            right: 60px;
+        }
+    }
+    .phone,
+    .email {
+        img {
+            margin-right: 10px;
+        }
+        span {
+            color: $silverText;
+            
+        }
+    }
+}
+// Style for mixin part-details
+.footer--middle-details {
+    .part-detail {
+        padding-top: 22px;
+        h4 {
+            color:$green;
+            font-size: 0.9rem;
+        }
+        li {
+            margin-top: 25px;
+            position: relative;
+            padding-left: 12px;
+            &:before {
+                content:'';
+                position: absolute;
+                left: 0;
+                top: 7px;
+                width: 7px;
+                height: 7px;
+                border-top: 1px solid $silverText;
+                border-right: 1px solid $silverText;
+                transform: rotate(45deg);
+            }
+        }
+        ul {
+            margin: 0;
+        }
+        a {
+            color: $silverText;
+            font-size: 0.8rem;
+        }
+    }
+    
+}
+.footer--bottom {
+    
+    &-more {
+        li {
+            margin-right: 23px;
+        }
+        a {
+            color: $silverText;
+        }
+        .img-pay {
+            img {
+                margin-left: 14px;
+            }
+        }
+    }
+    &-design {
+        background-color: $blackFooterBottom;    
+        padding: 14px 0; 
+    }
+}

@@ -1,0 +1,12 @@
+@mixin quantity-frame($width,$height) {
+    width: $width;
+    height: $height;
+    cursor: pointer;
+    background-color: white;
+    color: $silverTextBold;
+    border: 1px solid $silverText;
+    margin-right: 9px;
+    display: flex;
+    align-items: center;        
+    justify-content: center;
+}

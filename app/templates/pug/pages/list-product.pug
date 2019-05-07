@@ -1,0 +1,97 @@
+extends ../layouts/layout1.pug
+
+block title
+    title Danh sách sản phẩm
+
+block style
+    link(rel="stylesheet" type="text/css",href='../css/pages/list-product.css') 
+
+block content
+    main#list-product
+        include ../components/path.pug
+        +path('Danh sách sản phẩm')
+        section
+            aside
+                include ../components/title.pug
+                +title('Danh mục sản phẩm')
+                ul
+                    - var list1 = ['Cây chậu treo (10)','Cây có hoa (5)','Cây dây leo','Cây để bàn','Cây may mắn','Cây trang trí','Cây nội thất']
+                        each item in list1
+                            li= item
+                +title('Tìm theo giá')
+                ul
+                    -var list2 = ['200.000Đ - 400.000Đ','400.000Đ - 600.000Đ','600.000Đ - 800.000Đ','800.000Đ - 1.000.000Đ','1.000.000Đ - 1.200.000Đ']
+                        each item in list2
+                            li= item
+                +title('Tìm theo màu')
+                .wrap-color
+                    - let list3 = ['xanh cây','đỏ cam','tím','xanh trời','vàng','hồng']
+                        each item in list3
+                            .item-color.d-flex.align-items-center
+                                span
+                                span.text-capitalize= item
+            article
+                .banner-list
+                .select-list.d-flex.justify-content-between.align-items-center
+                    .nav.nav-tabs
+                        a.nav-item.nav-link.active#nav-grid-tab(href='#nav-grid' data-toggle='tab' onclick='return false')    
+                            img(src='../images/list2.png' alt='icon-list' )
+                        a.nav-item.nav-link#nav-list-tab(href='#nav-list' data-toggle='tab' onclick='return false')
+                            img(src='../images/list1.png' alt='icon-list')    
+                    .option-select.d-flex
+                        .select-item
+                            span Sắp xếp theo
+                            select
+                                option Tên sản phẩm
+                        .select-item
+                            span Show
+                            select
+                                option 15        
+                .tab-content#nav-tabContent
+                    .tab-pane.fade.show.active#nav-grid(aria-labelledby="nav-grid-tab")
+                        .list-content
+                            include ../components/product.pug
+                            +product('../images/duanho.png','Cây Dứa Nhỏ','../images/star.png','375.000đ','250.000đ')
+                            +product('../images/caychanchim.png','Cây Chân Chim','../images/star.png','375.000đ','250.000đ')
+                            +product('../images/danhdu.png','Cây Danh Dự','../images/star.png','375.000đ','250.000đ')
+                            +product('../images/cota.png','Cây Cọ Ta','../images/star.png','375.000đ','250.000đ')
+                            +product('../images/danhdu.png','Cây Danh Dự','../images/star.png','375.000đ','250.000đ')
+                            +product('../images/duanho.png','Cây Dứa Nhỏ','../images/star.png','375.000đ','250.000đ')
+                            +product('../images/caychanchim.png','Cây Chân Chim','../images/star.png','375.000đ','250.000đ')
+                            +product('../images/cota.png','Cây Cọ Ta','../images/star.png','375.000đ','250.000đ')
+                            +product('../images/duanho.png','Cây Dứa Nhỏ','../images/star.png','375.000đ','250.000đ')
+                            +product('../images/dalam.png','Cây Dứa Nhỏ','../images/star.png','375.000đ','250.000đ')
+                            +product('../images/caychanchim.png','Cây Chân Chim','../images/star.png','375.000đ','250.000đ')
+                            +product('../images/duanho.png','Cây Dứa Nhỏ','../images/star.png','375.000đ','250.000đ')                    
+                    .tab-pane.fade#nav-list(aria-labelledby="nav-list-tab")
+                        .grid-content
+                            include ../components/button.pug
+                            mixin item-list-product(src,title,content,price)
+                                .item-list-product.d-flex
+                                    img(src=src alt='hoa')
+                                    .item-content
+                                        h4= title
+                                        img(src='../images/star.png' alt='star')
+                                        p= content
+                                        span= price
+                                        .btn-action.d-flex.align-items-center
+                                            +button('mua ngay')
+                                            figure
+                                                img(src='../images/search.png' alt='search')
+                                            figure
+                                                img(src='../images/heart.png' alt='heart')    
+                            +item-list-product('../images/danhdu.png','Cây ngọc ngân','Cây ngọc ngân là một loại cây dành cho tình yêu! Đây là món quà bất ngờ để bạn dành tặng người ấy.Ngọc ngân(Valentine) không chỉ đẹp ở phiến lá xanh đám trắng','279.000đ')
+                            +item-list-product('../images/danhdu.png','Cây ngọc ngân','Cây ngọc ngân là một loại cây dành cho tình yêu! Đây là món quà bất ngờ để bạn dành tặng người ấy.Ngọc ngân(Valentine) không chỉ đẹp ở phiến lá xanh đám trắng','279.000đ')
+                            +item-list-product('../images/danhdu.png','Cây ngọc ngân','Cây ngọc ngân là một loại cây dành cho tình yêu! Đây là món quà bất ngờ để bạn dành tặng người ấy.Ngọc ngân(Valentine) không chỉ đẹp ở phiến lá xanh đám trắng','279.000đ')
+                            +item-list-product('../images/danhdu.png','Cây ngọc ngân','Cây ngọc ngân là một loại cây dành cho tình yêu! Đây là món quà bất ngờ để bạn dành tặng người ấy.Ngọc ngân(Valentine) không chỉ đẹp ở phiến lá xanh đám trắng','279.000đ')
+                            +item-list-product('../images/danhdu.png','Cây ngọc ngân','Cây ngọc ngân là một loại cây dành cho tình yêu! Đây là món quà bất ngờ để bạn dành tặng người ấy.Ngọc ngân(Valentine) không chỉ đẹp ở phiến lá xanh đám trắng','279.000đ')        
+                .pagination
+                    ul.d-flex.ml-auto
+                        include ../components/quantity-frame.pug
+                        +quantity-frame('Trang trước')
+                        +quantity-frame('1')
+                        +quantity-frame('2')
+                        +quantity-frame('3')
+                        +quantity-frame('4')
+                        +quantity-frame('Trang sau')
+                        

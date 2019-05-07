@@ -1,0 +1,121 @@
+extends ./layouts/layout2.pug
+
+block title 
+    title Trang chủ | Home
+block style
+    link(rel="stylesheet" type="text/css",href='./css/all.css') 
+    script(src='./script/popup.js')
+block content
+    main
+        article
+            #carouselExampleIndicators.carousel.slide(data-ride='carousel')
+                ol.carousel-indicators
+                    li(data-target='#carouselExampleIndicators' data-slide-to='0' ).active
+                    li(data-target='#carouselExampleIndicators' data-slide-to='1' )
+                    li(data-target='#carouselExampleIndicators' data-slide-to='2' )
+                .carousel-inner
+                    .carousel-item.active
+                        .slide-banner
+                            img(src='./images/gs-shop.png' alt='gs shop').d-none.d-sm-inline-block
+                            p.font-italic.text-white.d-none.d-sm-block (Miễn phí vận chuyển với những đơn hàng có trị giá trên 5.000.000 đ)
+                    .carousel-item
+                        .slide-banner
+                            img(src='./images/gs-shop.png' alt='gs shop').d-none.d-sm-inline-block
+                            p.font-italic.text-white.d-none.d-sm-block (Miễn phí vận chuyển với những đơn hàng có trị giá trên 5.000.000 đ)
+                    .carousel-item
+                        .slide-banner
+                            img(src='./images/gs-shop.png' alt='gs shop').d-none.d-sm-inline-block
+                            p.font-italic.text-white.d-none.d-sm-block (Miễn phí vận chuyển với những đơn hàng có trị giá trên 5.000.000 đ)
+        section
+            include ./components/product.pug
+            include ./components/title.pug
+            //- section 1
+            .section-1
+                .product--highligh
+                    +title('sản phẩm nổi bật')
+                    .product--highligh-content
+                        .child
+                            +product('./images/product-big.png','Cây Chân Chim','./images/star.png','250.000đ','260.000đ','new',false)
+                            .wrap-child
+                                +product('./images/cota.png','Cây Cọ Ta','./images/star.png','150.000đ','250.000đ')
+                                +product('./images/duanho.png','Cây Dứa Nhỏ','./images/star.png','375.000đ','250.000đ')
+                        .child
+                            +product('./images/product-big.png','Cây Đa Búp Đỏ','./images/star.png','1.000.000đ','250.000đ','-50%')
+                            .wrap-child
+                                +product('./images/dalam.png','Cây Dạ Lam','./images/star.png','500.000đ','250.000đ','-50%')
+                                +product('./images/danhdu.png','Cây Danh Dự','./images/star.png','850.000đ','250.000đ','new')
+            //- section 2
+            .section-2
+                .product--buy-sale
+                    +title('sản phẩm mua nhiều')
+                    +title('sản phẩm khuyến mại',true)
+                    .product--buy-content
+                        mixin product-buy(src1,title,src2,price)
+                            .item-product.d-flex
+                                img(src=src1,alt='cây')
+                                .item-info
+                                    span= title
+                                    img(src=src2 alt='star')
+                                    p= price
+                        +product-buy('./images/dalam.png','Cây Dạ Lam','./images/star.png','250.000đ')
+                        +product-buy('./images/cota.png','Cây Cọ Ta','./images/star.png','260.000đ')
+                        +product-buy('./images/duanho.png','Cây Dứa Nhỏ','./images/star.png','270.000đ')
+                        +product-buy('./images/danhdu.png','cây chân chim','./images/star.png','280.000đ')
+                        +product-buy('./images/cota.png','Cây Đa Búp Đỏ','./images/star.png','290.000đ')
+                        +product-buy('./images/dalam.png','Cây Danh Dự','./images/star.png','210.000đ')            
+                    //- .product--sale
+                    
+                    .product--sale-content
+                        +product('./images/cota.png','Cây Cọ Ta','./images/star.png','153.000đ','250.000đ','-25%')
+                        +product('./images/duanho.png','Cây Dứa Nhỏ','./images/star.png','120.000đ','250.000đ','-10%')
+                        +product('./images/danhdu.png','Cây Danh Dự','./images/star.png','190.000đ','250.000đ')
+                        +product('./images/dalam.png','Cây Dạ Lam','./images/star.png','120.000đ','250.000đ')
+                        +product('./images/duanho.png','Cây Danh Dự','./images/star.png','178.000đ','250.000đ')
+                        +product('./images/cota.png','Cây Cọ Ta','./images/star.png','151.000đ','250.000đ')
+            //- section 3
+            .section-3
+                .wrap-dalat
+                    img(src='./images/dalat.png' alt='sương rồng đà lạt')
+            //- section 4
+            .section-4
+                +title('sản phẩm mới',true)
+                .product-news
+                    +product('./images/cota.png','Cây Cọ Ta','./images/star.png','153.000đ','250.000đ','new')
+                    +product('./images/dalam.png','Cây Dạ Lam','./images/star.png','123.000đ','250.000đ')
+                    +product('./images/duanho.png','Cây Dứa Nhỏ','./images/star.png','157.000đ','250.000đ')
+                    +product('./images/danhdu.png','Cây Danh Dự','./images/star.png','110.000đ','250.000đ')
+                    +product('./images/dalam.png','Cây Dạ Lam','./images/star.png','170.000đ','250.000đ')
+                    +product('./images/cota.png','Cây Cọ Ta','./images/star.png','193.000đ','250.000đ')
+                    +product('./images/duanho.png','Cây Dứa Nhỏ','./images/star.png','340.000đ','250.000đ')
+                    +product('./images/danhdu.png','Cây Danh Dự','./images/star.png','103.000đ','250.000đ')
+            //- section 5
+            .section-5
+                +title('tin tức')                
+                mixin new(src,date,title,content)
+                    .new
+                        img(src=src alt='ảnh').w-100
+                        i= date
+                        a(href='#')
+                            h4= title
+                        p= content
+                        span.font-italic Đọc tiếp    
+                .wrap-new
+                    +new('./images/new3.png','Thứ 7, ngày 31, tháng 12, năm 2019','15 thiết kế phòng ngủ vạn người mê','Cùng Sài Gòn Hoa tìm hiểu vài xu hướng thiết kế  sân vườn được ưa chuộng hiện nay nhé ! kết hợp hàng rào')
+                    +new('./images/new2.png','Thứ 2, ngày 31, tháng 3, năm 2014','15 thiết kế phòng ngủ vạn người mê','Cùng Sài Gòn Hoa tìm hiểu vài xu hướng thiết kế  sân vườn được ưa chuộng hiện nay nhé ! kết hợp hàng rào') 
+                    +new('./images/new4.png','Thứ 5, ngày 31, tháng 5, năm 2012','15 thiết kế phòng ngủ vạn người mê','Cùng Sài Gòn Hoa tìm hiểu vài xu hướng thiết kế  sân vườn được ưa chuộng hiện nay nhé ! kết hợp hàng rào')   
+    #wrap-popup
+        #popup.position-relative.d-flex
+            img(src='./images/flowers.png' alt='hoa popup')
+            .recieve-email
+                img(src='./images/recieve-email.png ' alt='nhận email')
+                h4.text-uppercase đăng kí nhận email ngay hôm nay
+                .input-search.position-relative
+                    input(type='text' placeholder='Nhập email của bạn vào đây')
+                    figure.position-absolute
+                        img(src='../images/btn-footer.png',alt='button')
+                p Đăng kí email ngay hôm nay để nhận các thông tin về sự kiện và các chương trình giảm giá từ chúng tôi
+                input(type='checkbox')
+                label Không hiển thị lại thông báo này nữa
+            .delete.position-absolute
+                div
+                div

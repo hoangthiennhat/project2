@@ -1,0 +1,22 @@
+button {
+    background-color: $green;
+    border:0;
+    color:white;
+    padding:17px 40px;
+    border-radius: 999px !important;
+    transition: 0.3s;
+    &:hover {
+        background-color:white;
+        color: $green;
+        border: 1px solid $green;
+    }
+}
+.not-color {
+    background-color: transparent;
+    color: $green;
+    border: 1px solid $green;
+    &:hover {
+        background-color: $green;
+        color:white;
+    }
+}

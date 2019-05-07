@@ -1,0 +1,29 @@
+extends ../layouts/layout1.pug
+
+block title
+    title Đăng nhập
+
+block style
+    link(rel="stylesheet" type="text/css",href='../css/pages/signin.css')
+
+block content
+    main#signin
+        include ../components/path.pug
+        +path('Đăng nhập')
+        .signin--content
+            .signin--content-input
+                h4 thông tin các nhân
+                include ../components/input.pug
+                +input('Email của bạn',true)
+                +input('Mật khẩu',true)
+                .input-checkbox
+                    input(type='checkbox')
+                    label Ghi nhớ tài khoản
+                    i Bạn quên mật khẩu
+                    include ../components/button.pug
+                +button('đăng nhập')
+            .signin--content-question
+                h4 bạn chưa có tài khoản
+                p Đăng kí tài khoản ngay để có thể mua hàng nhanh chóng và dễ dàng hơn ! 
+                    | ngoài ra còn có rất nhiều chính sách và ưu đãi cho các thành viên citybike
+                +button('đăng ký')    

@@ -1,0 +1,62 @@
+footer
+    .footer--top.d-sm-flex.align-items-center.justify-content-between
+        .footer--top-social
+            span.text-uppercase kênh thông tin từ chúng tôi :
+            .social-icon.d-none.d-sm-block
+                - var listSocial = ['facebook','twitter','youtube','v']
+                    each item in listSocial
+                        a(href='#')
+                            img(src='./images/' + item + '.png')
+            .social-icon.d-block.d-sm-none
+                - var listSocial1 = ['face','twitter','ytb','v']
+                    each item in listSocial1
+                        a(href='#')
+                            img(src='./images/' + item + '-mobile.png')                
+        .footer--top-mail
+            h4.text-uppercase đăng kí nhận thông tin <br class='d-none d-sm-block'> từ chúng tôi
+        .footer--top-search
+            .input-search.position-relative
+                input(type='text')
+                figure.position-absolute
+                    img(src='./images/btn-footer.png',alt='button')
+    hr
+    .footer--middle.d-md-flex
+        .footer--middle-info.mr-4
+            figure.position-relative
+                img(src='./images/GreenShop.png' alt='greenshop')
+                span.position-absolute Món quà từ thiên nhiên
+            p Green shop được thành lập từ 8/2010 được sự tin tưởng của  các khách hàng trong suốt thời gian hoạt 
+                | động đến nay cửa hàng ngày một phát triển
+            .phone
+                img(src='./images/phone.png',alt='phone')    
+                span Điện thoại : (84-4) 66.558.868
+            .email
+                img(src='./images/email.png',alt='email')    
+                span Email : info@dkt.com.vn
+        .footer--middle-details.w-100.d-sm-flex.justify-content-between
+            mixin part-details(title,...ct)
+                .part-detail
+                    h4.text-uppercase.font-weight-bold= title
+                    ul    
+                        - var listDetails = ct;
+                            each item in listDetails
+                                li
+                                    a(href='#').text-capitalize= item
+            +part-details('thông tin khách hàng','tài khoản của tôi','sản phẩm ưa thích','lịch sử mua hàng ','chính sách đổi trả','góp ý, khiếu nại')
+            +part-details('hỗ trợ dịch vụ','hệ thống cửa hàng','hướng dẫn mua hàng','hướng dẫn thanh toán ','tích điểm đổi quà','câu hỏi thường gặp')
+            +part-details('chính sách ưu đãi','chính sách giao hàng','chính sách đổi trả sản phẩm','chính sách bảo hàng ','giới thiệu sản phẩm mới','chính sách trả góp')
+            +part-details('tin tức','tin mới','khuyến mại','tuyển dụng','download' ,'tags')                        
+    hr
+    .footer--bottom
+        .footer--bottom-more.d-none.d-sm-flex.justify-content-between
+            - var listMore = ['sitemap','danh mục sản phẩm','hợp tác','thông tin liên hệ','câu hỏi thường gặp']
+                ul.d-flex.mb-0
+                    each item in listMore
+                        li
+                            a(href='#').text-capitalize= item
+            .img-pay
+                - var listImg = ['visa','map','paypal','osc']
+                    each item in listImg
+                        img(src='./images/' + item + '.png' alt=item)                
+        .footer--bottom-design.text-center.text-white
+            | Thiết kế bởi Bizweb＠

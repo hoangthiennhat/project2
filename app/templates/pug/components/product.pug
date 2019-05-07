@@ -1,0 +1,35 @@
+include ./button.pug
+mixin product(src1,title,src2,priceNew,priceOld,sale,check= true)
+    .product.position-relative
+        if check
+            figure
+                img(src=src1 alt='hoa')
+            .content
+                p= title
+                img(src=src2 alt='star')
+                .price
+                    .price--new= priceNew
+                    .price--old= priceOld
+            if sale
+                if sale == 'new'
+                    .sales= sale
+                else
+                    .sales.bg-percent= sale    
+        else 
+            figure.position-relative
+                img(src=src1 alt='hoa')
+                .on-img.position-absolute.d-flex.justify-content-center.align-items-center
+                    +button('mua ngay')
+                    .search-product.d-flex.justify-content-center.align-items-center
+                        img(src='./images/search.png' alt='search product')
+            .content
+                p= title
+                img(src=src2 alt='star')
+                .price
+                    .price--new= priceNew
+                    .price--old= priceOld
+            if sale
+                if sale == 'new'
+                    .sales= sale
+                else
+                    .sales.bg-percent= sale    

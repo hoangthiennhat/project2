@@ -1,0 +1,38 @@
+@import '../common/common';
+
+// style for signin page
+main {
+    padding: 0 $paddingMain;
+    .signin--content {
+        margin: 78px 0 109px;
+        display: flex;
+        &-input {
+            width: 50%;
+            margin-right: 28px;
+        }
+        &-question {
+            width: 50%;
+            margin-left: 28px;
+        }
+        h4 {
+            color: $green;
+            text-transform: uppercase;
+        }
+        label {
+            margin-left: 14px
+        }
+        i {
+            text-decoration: underline;
+            margin-left: 26px;
+            color: $silverTextBold;
+        }
+        .input-checkbox {
+            margin: 47px 0 34px;
+        }
+        &-question {
+            p {
+                margin: 21px 0 38px;
+            }
+        }
+    }
+}

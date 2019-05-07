@@ -1,0 +1,91 @@
+@import '../common/common';
+
+// style for main
+#cart {
+    padding : 0 $paddingMain;
+}
+main {
+    
+    margin-bottom: 161px;
+    /*
+    * tyle common for table
+    */
+    td {
+        border: 1px solid $silverText;
+        text-align: center;
+    }
+    thead {
+            background-color: $green;
+        
+    }
+    // close 
+    h4 {
+        color: $green;
+        margin: 59px 0;
+    }
+    .cart {
+        table {
+            width: 100%;
+        }
+        thead {
+            td:first-child {
+                width: 140px;
+            }
+            td {
+                padding: 13px 0;
+                
+            }
+        }
+        tbody {
+            figure {
+                padding: 12px;
+                img {
+                    width: 116px;
+                }
+            }
+            li {
+                @include quantity-frame(44px,44px);
+            }
+            tr {
+                td:nth-child(2) {
+                    color: $green;
+                }
+                td:nth-child(4) {
+                li {
+                    margin-left: 50%;
+                    transform: translateX(-50%);
+                    }
+                }
+            }
+            
+        }
+    }
+    .select-buy {
+        margin: 34px 0 51px;
+        button:first-child {
+            margin-right: 16px;
+        }
+    }
+    .total-pay {
+        margin-bottom: 26px;
+        thead {
+            td {
+                color: white;
+            }
+        }
+        tbody {
+            td {
+                color: $green;
+            }
+        }
+        td {
+            padding: 25px 113px;
+            text-transform: uppercase;
+        }
+    }
+    &>button {
+        clear: both;
+        display : block;
+        margin-left: auto;
+    }
+}

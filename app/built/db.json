@@ -1,0 +1,237 @@
+{
+    "products" : [
+        {   
+            "id" : 1,
+            "src" : "../images/duanho.png",
+            "content" : "Cây Dứa Nhỏ là một loại cây rất đẹp",
+            "name" : "Cây Dứa Nhỏ",
+            "priceNew" : "200.000đ",
+            "priceOld" : "375.000đ"
+        },
+        {
+            "id" : 2,
+            "src" : "../images/cota.png",
+            "content" : "Cây CỌ Ta là một loại cây rất đẹp",
+            "name" : "Cây Cọ Ta",
+            "priceNew" : "104.000đ",
+            "priceOld" : "140.000đ"
+        },
+        {
+            "id" : 3,
+            "src" : "../images/dalam.png",
+            "content" : "Cây Dạ Lam là một loại cây rất đệp",
+            "name" : "Cây Dạ Lam",
+            "priceNew" : "120.000đ",
+            "priceOld" : "260.000đ"
+        },
+        {
+            "id" : 4,
+            "src" : "../images/danhdu.png",
+            "content" : "Cây Danh Dự là một loại cây rất đẹp",
+            "name" : "Cây Danh Dự",
+            "priceNew" : "230.000đ",
+            "priceOld" : "475.000đ"
+        },
+        {
+            "id" : 5,
+            "src" : "../images/caychanchim.png",
+            "content" : " cây ngọc ngân là một loại cây rất đẹp",
+            "name" : "Cây Chân Chim",
+            "priceNew" : "201.000đ",
+            "priceOld" : "375.000đ"
+        },
+        {
+            "id" : 6,
+            "src" : "../images/cota.png",
+            "content" : "Cây CỌ Ta là một loại cây rất đẹp",
+            "name" : "Cây Cọ Ta",
+            "priceNew" : "104.000đ",
+            "priceOld" : "140.000đ"
+        },
+        {
+            "id" : 7,
+            "src" : "../images/duanho.png",
+            "content" : "Cây Dứa Nhỏ là một loại cây rất đẹp",
+            "name" : "Cây Dứa Nhỏ",
+            "priceNew" : "200.000đ",
+            "priceOld" : "375.000đ"
+        },
+        {
+            "id" : 8,
+            "src" : "../images/caychanchim.png",
+            "content" : " cây ngọc ngân là một loại cây rất đẹp",
+            "name" : "Cây Chân Chim",
+            "priceNew" : "201.000đ",
+            "priceOld" : "375.000đ"
+        },
+        {
+            "id" : 9,
+            "src" : "../images/dalam.png",
+            "content" : "Cây Dạ Lam là một loại cây rất đệp",
+            "name" : "Cây Dạ Lam",
+            "priceNew" : "120.000đ",
+            "priceOld" : "260.000đ"
+        },{   
+            "id" : 10,
+            "src" : "../images/duanho.png",
+            "content" : "Cây Dứa Nhỏ là một loại cây rất đẹp",
+            "name" : "Cây Dứa Nhỏ",
+            "priceNew" : "200.000đ",
+            "priceOld" : "375.000đ"
+        },
+        {
+            "id" : 11,
+            "src" : "../images/cota.png",
+            "content" : "Cây CỌ Ta là một loại cây rất đẹp",
+            "name" : "Cây Cọ Ta",
+            "priceNew" : "104.000đ",
+            "priceOld" : "140.000đ"
+        },
+        {
+            "id" : 12,
+            "src" : "../images/dalam.png",
+            "content" : "Cây Dạ Lam là một loại cây rất đệp",
+            "name" : "Cây Dạ Lam",
+            "priceNew" : "120.000đ",
+            "priceOld" : "260.000đ"
+        },
+        {
+            "id" : 13,
+            "src" : "../images/danhdu.png",
+            "content" : "Cây Danh Dự là một loại cây rất đẹp",
+            "name" : "Cây Danh Dự",
+            "priceNew" : "230.000đ",
+            "priceOld" : "475.000đ"
+        },
+        {
+            "id" : 14,
+            "src" : "../images/caychanchim.png",
+            "content" : " cây ngọc ngân là một loại cây rất đẹp",
+            "name" : "Cây Chân Chim",
+            "priceNew" : "201.000đ",
+            "priceOld" : "375.000đ"
+        },
+        {
+            "id" : 15,
+            "src" : "../images/cota.png",
+            "content" : "Cây CỌ Ta là một loại cây rất đẹp",
+            "name" : "Cây Cọ Ta",
+            "priceNew" : "104.000đ",
+            "priceOld" : "140.000đ"
+        },
+        {
+            "id" : 16,
+            "src" : "../images/duanho.png",
+            "content" : "Cây Dứa Nhỏ là một loại cây rất đẹp",
+            "name" : "Cây Dứa Nhỏ",
+            "priceNew" : "200.000đ",
+            "priceOld" : "375.000đ"
+        },
+        {
+            "id" : 17,
+            "src" : "../images/caychanchim.png",
+            "content" : " cây ngọc ngân là một loại cây rất đẹp",
+            "name" : "Cây Chân Chim",
+            "priceNew" : "201.000đ",
+            "priceOld" : "375.000đ"
+        },
+        {
+            "id" : 18,
+            "src" : "../images/dalam.png",
+            "content" : "Cây Dạ Lam là một loại cây rất đệp",
+            "name" : "Cây Dạ Lam",
+            "priceNew" : "120.000đ",
+            "priceOld" : "260.000đ"
+        },
+        {
+            "id" : 19,
+            "src" : "../images/dalam.png",
+            "content" : "Cây Dạ Lam là một loại cây rất đệp",
+            "name" : "Cây Dạ Lam",
+            "priceNew" : "120.000đ",
+            "priceOld" : "260.000đ"
+        },{   
+            "id" : 20,
+            "src" : "../images/duanho.png",
+            "content" : "Cây Dứa Nhỏ là một loại cây rất đẹp",
+            "name" : "Cây Dứa Nhỏ",
+            "priceNew" : "200.000đ",
+            "priceOld" : "375.000đ"
+        },
+        {
+            "id" : 21,
+            "src" : "../images/cota.png",
+            "content" : "Cây CỌ Ta là một loại cây rất đẹp",
+            "name" : "Cây Cọ Ta",
+            "priceNew" : "104.000đ",
+            "priceOld" : "140.000đ"
+        },
+        {
+            "id" : 22,
+            "src" : "../images/dalam.png",
+            "content" : "Cây Dạ Lam là một loại cây rất đệp",
+            "name" : "Cây Dạ Lam",
+            "priceNew" : "120.000đ",
+            "priceOld" : "260.000đ"
+        },
+        {
+            "id" : 23,
+            "src" : "../images/danhdu.png",
+            "content" : "Cây Danh Dự là một loại cây rất đẹp",
+            "name" : "Cây Danh Dự",
+            "priceNew" : "230.000đ",
+            "priceOld" : "475.000đ"
+        },
+        {
+            "id" : 24,
+            "src" : "../images/caychanchim.png",
+            "content" : " cây ngọc ngân là một loại cây rất đẹp",
+            "name" : "Cây Chân Chim",
+            "priceNew" : "201.000đ",
+            "priceOld" : "375.000đ"
+        },
+        {
+            "id" : 25,
+            "src" : "../images/cota.png",
+            "content" : "Cây CỌ Ta là một loại cây rất đẹp",
+            "name" : "Cây Cọ Ta",
+            "priceNew" : "104.000đ",
+            "priceOld" : "140.000đ"
+        },
+        {
+            "id" : 26,
+            "src" : "../images/duanho.png",
+            "content" : "Cây Dứa Nhỏ là một loại cây rất đẹp",
+            "name" : "Cây Dứa Nhỏ",
+            "priceNew" : "200.000đ",
+            "priceOld" : "375.000đ"
+        },
+        {
+            "id" : 27,
+            "src" : "../images/caychanchim.png",
+            "content" : " cây ngọc ngân là một loại cây rất đẹp",
+            "name" : "Cây Chân Chim",
+            "priceNew" : "201.000đ",
+            "priceOld" : "375.000đ"
+        },
+        {
+            "id" : 28,
+            "src" : "../images/dalam.png",
+            "content" : "Cây Dạ Lam là một loại cây rất đệp",
+            "name" : "Cây Dạ Lam",
+            "priceNew" : "120.000đ",
+            "priceOld" : "260.000đ"
+        }
+        ,
+        {
+            "id" : 29,
+            "src" : "../images/dalam.png",
+            "content" : "Cây Dạ Lam là một loại cây rất đệp",
+            "name" : "Cây Dạ Lam",
+            "priceNew" : "120.000đ",
+            "priceOld" : "260.000đ"
+        }
+
+
+    ]
+}

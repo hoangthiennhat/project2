@@ -1,0 +1,9 @@
+mixin input(name,check=false)
+    .input-child
+        .title-input    
+            if check
+                label= name
+            else
+                label= name
+                small  * :
+        input(type='text')

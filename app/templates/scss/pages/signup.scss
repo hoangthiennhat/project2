@@ -1,0 +1,31 @@
+@import '../common/common';
+
+// style for signup
+main {
+    padding : 0 $paddingMain;
+    .info--customer {
+        margin-top: 68px;
+        h4 {
+            font-weight: bold;
+            color: $green;
+        }
+        &-content {
+            .left,
+            .right {
+                width: 50%;
+            }
+            .left {
+                margin-right: 29px
+            }
+            .right {
+                margin-left: 29px
+            }
+        }
+        input[type=checkbox] {
+            margin-top: 38px;
+        }
+    }
+    .btn-signup {
+        margin: 43px 0 100px;
+    }
+}
